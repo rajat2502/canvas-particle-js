@@ -39,10 +39,10 @@ var c = canvas.getContext('2d');
 // }
 
 const color = [
-  "#FFEAFE",
-  "#CCC1FF",
+  "#6600CC",
+  "#FFCC00",
   "#9EA9F0",
-  "#553C8B",
+  "#CC0000",
 ]
 
 // for(i=0; i<100; i++){
@@ -70,7 +70,7 @@ const color = [
 // c.stroke();
 
 var maxRadius = 20;
-var minRadius = 4;
+var minRadius = 2;
 var mouse = {
   x: undefined,
   y: undefined
@@ -129,18 +129,9 @@ function Circle(x, y, dx, dy, radius){
 
 var circleArray = [];
 
-for(var i = 0; i < 800; i++){
-  var r = Math.floor(Math.random() * 3) + 1 ;
-  var x = Math.random() * (innerWidth - r*2) + r;
-  var y = Math.random() * (innerHeight - r*2) + r;
-  var dx = (Math.random() - 0.5) * 14;
-  var dy = (Math.random() - 0.5) * 14;
-  circleArray.push(new Circle(x, y, dx, dy, r));
-}
-
 function init(){
   circleArray = [];
-  for(var i = 0; i < 500; i++){
+  for(var i = 0; i < 200; i++){
     var r = Math.floor(Math.random() * 3) + 1 ;
     var x = Math.random() * (innerWidth - r*2) + r;
     var y = Math.random() * (innerHeight - r*2) + r;
